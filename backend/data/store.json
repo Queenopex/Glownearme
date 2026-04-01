@@ -1,0 +1,208 @@
+{
+  "users": [
+    {
+      "id": "client-1",
+      "role": "client",
+      "name": "Maya Johnson",
+      "email": "maya@glownearme.com",
+      "password": "demo123",
+      "location": "Lekki, Lagos"
+    },
+    {
+      "id": "artist-1",
+      "role": "artist",
+      "artistId": "1",
+      "name": "Chioma Beauty",
+      "email": "chioma@glownearme.com",
+      "password": "demo123",
+      "location": "Ikeja, Lagos"
+    }
+  ],
+  "artists": [
+    {
+      "id": "1",
+      "name": "Chioma Beauty",
+      "specialty": "Bridal & Traditional",
+      "location": "Ikeja, Lagos",
+      "area": "mainland",
+      "rating": 4.9,
+      "reviews": 127,
+      "pricePerSession": 25000,
+      "responseTime": "Within 1 hour",
+      "isVerified": true
+    },
+    {
+      "id": "2",
+      "name": "Tunde Glam Studio",
+      "specialty": "Editorial & Fashion",
+      "location": "Lekki Phase 1",
+      "area": "island",
+      "rating": 4.8,
+      "reviews": 89,
+      "pricePerSession": 40000,
+      "responseTime": "Within 2 hours",
+      "isVerified": true
+    },
+    {
+      "id": "3",
+      "name": "Amaka Glow",
+      "specialty": "Natural & Everyday",
+      "location": "Yaba, Lagos",
+      "area": "mainland",
+      "rating": 5,
+      "reviews": 203,
+      "pricePerSession": 15000,
+      "responseTime": "Within 30 minutes",
+      "isVerified": true
+    },
+    {
+      "id": "4",
+      "name": "Zainab Artistry",
+      "specialty": "Glamour & Events",
+      "location": "Victoria Island",
+      "area": "island",
+      "rating": 4.9,
+      "reviews": 156,
+      "pricePerSession": 35000,
+      "responseTime": "Within 1 hour",
+      "isVerified": true
+    }
+  ],
+  "bookings": [
+    {
+      "id": "b3",
+      "artistId": "3",
+      "clientId": "client-1",
+      "clientName": "Maya Johnson",
+      "service": "Natural & Everyday",
+      "date": "2026-10-22",
+      "time": "09:00 AM",
+      "status": "pending_artist_response",
+      "paymentStatus": "authorized",
+      "location": "Yaba, Lagos",
+      "notes": "Birthday guest glam. I would love a soft skin finish.",
+      "serviceAmount": 15000,
+      "bookingFee": 750,
+      "totalAmount": 15750,
+      "refundAmount": 0,
+      "rematchEligible": false,
+      "priceProtectionLimit": 10000,
+      "timeline": [
+        {
+          "type": "request_created",
+          "at": "2026-03-27T09:05:00.000Z",
+          "note": "Client submitted booking request and payment was placed on hold."
+        }
+      ]
+    },
+    {
+      "id": "b1",
+      "artistId": "4",
+      "clientId": "client-1",
+      "clientName": "Maya Johnson",
+      "service": "Birthday Glam Session",
+      "date": "2026-03-30",
+      "time": "11:00",
+      "status": "accepted",
+      "paymentStatus": "captured",
+      "location": "Lekki Phase 1",
+      "notes": "Need full glam for a birthday brunch.",
+      "serviceAmount": 35000,
+      "bookingFee": 1750,
+      "totalAmount": 36750,
+      "refundAmount": 0,
+      "rematchEligible": false,
+      "priceProtectionLimit": 10000,
+      "timeline": [
+        {
+          "type": "request_created",
+          "at": "2026-03-25T10:00:00.000Z",
+          "note": "Client submitted booking request and payment was placed on hold."
+        },
+        {
+          "type": "accept",
+          "at": "2026-03-25T11:00:00.000Z",
+          "note": "Artist accepted the booking and payment was captured."
+        }
+      ]
+    },
+    {
+      "id": "b2",
+      "artistId": "2",
+      "clientId": "client-1",
+      "clientName": "Maya Johnson",
+      "service": "Editorial Shoot Prep",
+      "date": "2026-04-02",
+      "time": "08:30",
+      "status": "cancelled_by_artist",
+      "paymentStatus": "refunded",
+      "location": "Victoria Island",
+      "notes": "Shoot call time is early, so prep needs to start on time.",
+      "serviceAmount": 40000,
+      "bookingFee": 2000,
+      "totalAmount": 42000,
+      "refundAmount": 42000,
+      "rematchEligible": true,
+      "priceProtectionLimit": 10000,
+      "timeline": [
+        {
+          "type": "request_created",
+          "at": "2026-03-24T08:00:00.000Z",
+          "note": "Client submitted booking request and payment was placed on hold."
+        },
+        {
+          "type": "accept",
+          "at": "2026-03-24T09:15:00.000Z",
+          "note": "Artist accepted the booking and payment was captured."
+        },
+        {
+          "type": "cancel_by_artist",
+          "at": "2026-03-26T16:30:00.000Z",
+          "note": "Artist cancelled after acceptance. Client refund and rematch protection triggered."
+        }
+      ]
+    }
+  ],
+  "savedArtists": [
+    {
+      "clientId": "client-1",
+      "artistId": "1"
+    },
+    {
+      "clientId": "client-1",
+      "artistId": "3"
+    },
+    {
+      "clientId": "client-1",
+      "artistId": "4"
+    }
+  ],
+  "conversations": [
+    {
+      "id": "c1",
+      "artistId": "1",
+      "artistName": "Chioma Beauty",
+      "messages": [
+        {
+          "id": "m1",
+          "sender": "client",
+          "text": "Can you do a soft glam look for a 10 AM session?",
+          "sentAt": "2026-03-27T09:10:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "artistId": "2",
+      "artistName": "Tunde Glam Studio",
+      "messages": [
+        {
+          "id": "m2",
+          "sender": "client",
+          "text": "I sent over my event brief and reference photos.",
+          "sentAt": "2026-03-27T08:00:00.000Z"
+        }
+      ]
+    }
+  ]
+}
